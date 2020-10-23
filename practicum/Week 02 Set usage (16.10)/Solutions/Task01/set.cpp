@@ -1,14 +1,19 @@
+#ifndef __SET_CPP
+#define __SET_CPP
+
 #include "set.h"
 
 #include <iostream>
 
-Set::Set()
+template <class T>
+Set<T>::Set()
 {
     first = nullptr;
     last = nullptr;
 }
 
-Set::~Set()
+template <class T>
+Set<T>::~Set()
 {
     Set::Node *current = first,
               *temp = nullptr;
@@ -22,7 +27,8 @@ Set::~Set()
     }
 }
 
-void Set::add(int data)
+template <class T>
+void Set<T>::add(T data)
 {
     if (!first)
     {
@@ -77,7 +83,8 @@ void Set::add(int data)
     }
 }
 
-void Set::print()
+template <class T>
+void Set<T>::print()
 {
     Set::Node *current = first;
 
@@ -88,3 +95,5 @@ void Set::print()
         current = current->next;
     }
 }
+
+#endif

@@ -13,7 +13,7 @@ Set::~Set()
     Set::Node *current = first,
               *temp = nullptr;
 
-    while (current != nullptr)
+    while (current)
     {
         temp = current;
         current = current->next;
@@ -25,7 +25,7 @@ Set::~Set()
 bool Set::isAdded(int data) {
     Set::Node *current = first;
 
-    while (current != nullptr)
+    while (current)
     {
         if (current->data == data)
         {
@@ -40,7 +40,7 @@ bool Set::isAdded(int data) {
 
 void Set::add(int data)
 {
-    if (first == nullptr)
+    if (!first)
     {
         first = new Set::Node();
         first->data = data;
@@ -66,7 +66,7 @@ void Set::print()
 {
     Set::Node *current = first;
 
-    while (current != nullptr)
+    while (current)
     {
         std::cout << current->data << " ";
 

@@ -22,7 +22,7 @@ Set::~Set()
     }
 }
 
-void Set::add(int data)
+void Set::add(Comparable *data)
 {
     if (!first)
     {
@@ -37,11 +37,13 @@ void Set::add(int data)
 
         while (current)
         {
-            if (current->data == data)
+            int compared = current->data->compareTo(data);
+
+            if (compared == 0)
             {
                 return;
             }
-            else if (current->data > data)
+            else if (compared > 0)
             {
                 break;
             }
@@ -83,7 +85,7 @@ void Set::print()
 
     while (current)
     {
-        std::cout << current->data << " ";
+        current->data->print();
 
         current = current->next;
     }

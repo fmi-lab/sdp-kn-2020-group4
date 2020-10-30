@@ -17,7 +17,7 @@ public:
 
     bool operator==(const Task &other) const;
     bool operator>(const Task &other) const;
-    friend std::ostream &operator<<(std::ostream &out, const Task &student);
+    friend std::ostream &operator<<(std::ostream &out, const Task &task);
 
     std::string getDate() const { return this->date; }
 };

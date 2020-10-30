@@ -13,6 +13,8 @@ int main()
 
     taskList.print();
 
+    std::cout << std::endl << "End list print" << std::endl;
+
     taskList.toSet().print();
 
     // taskList.remove(Task("25.10_12:00_Work2"));

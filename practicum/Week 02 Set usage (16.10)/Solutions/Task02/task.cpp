@@ -20,10 +20,10 @@ bool Task::operator>(const Task &other) const
     return this->date > other.date;
 }
 
-std::ostream &operator<<(std::ostream &out, const Task &student)
+std::ostream &operator<<(std::ostream &out, const Task &task)
 {
     out << std::endl
-        << "Task date: " << student.getDate();
+        << "Task date: " << task.getDate();
 
     return out;
 }

@@ -1,0 +1,10 @@
+digraph G{
+    subgraph step_0 {
+        16547136[label="1"];
+    }
+    subgraph step_1 {
+        16547136[label="1"];
+        16547136->16547160[color=red];
+        16547160[label="2"];
+    }
+}
